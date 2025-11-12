@@ -1,0 +1,56 @@
+:root {
+  --custom-tab-container-bg: rgba(255, 255, 255, 1);
+  --custom-tab-item-active-bg: rgba(245, 246, 249, 1);
+  --custom-tab-item-color: rgba(107, 114, 128, 1);;
+  --custom-tab-item-active-color: rgba(28, 30, 36, 1);
+}
+
+:root.dark {
+  --custom-tab-container-bg: rgba(28, 30, 36, 1);
+  --custom-tab-item-active-bg: rgba(23, 24, 25, 1);
+  --custom-tab-item-active-color: #FDFDFD;
+  --custom-tab-item-color: rgba(107, 114, 128, 1);
+}
+
+.custom_tab__container {
+  width: 100%;
+  border-radius: 24px;
+  padding: 4px;
+  background: var(--custom-tab-container-bg);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  .custom_tab__indicator {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    height: calc(100% - 8px);
+    border-radius: 24px;
+    background: var(--custom-tab-item-active-bg);
+    transition: transform 300ms ease;
+    z-index: 0;
+  }
+
+  .custom_tab__item {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--custom-tab-item-color);
+    transition: color 150ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .custom_tab__item-active {
+    color: var(--custom-tab-item-active-color);
+  }
+}
+
+

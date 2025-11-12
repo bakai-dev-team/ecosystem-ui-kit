@@ -1,0 +1,44 @@
+:root.dark {
+  --bg: rgba(245, 246, 249, 1);
+  --label: rgba(107, 114, 128, 1);
+  --amount:#FFFFFF;
+  --color-icon:brightness(0) invert(1);
+}
+
+:root {
+  --bg: #F7F8FA;
+  --label: rgba(107, 114, 128, 1);
+  --amount:#000000;
+  --color-icon:invert(1) brightness(0);
+}
+
+
+.account_limit{
+  background-color: var(--bg);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--text);
+  width: 100%;
+}
+
+.account_limit-label{
+ font-size: 14px;
+  font-weight: 400;
+  color: var(--label);
+  line-height: 130%;
+}
+
+
+.account_limit-amount{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--amount);
+}

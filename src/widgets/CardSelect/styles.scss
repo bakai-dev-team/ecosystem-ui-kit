@@ -1,0 +1,82 @@
+:root {
+  --bg: rgba(255, 255, 255, 1);
+  --card-text: #2d465b;
+  --card-sum: #07203a;
+  --card-number: #2d465b;
+  --card-icon: #e8effd;
+  --card-icon-color: invert(1) brightness(0);
+  --card-close-icon-color: #2d465b;
+  --card-item: rgba(156, 163, 175, 1);
+  --card-title: rgba(28, 30, 36, 1);
+  --active-card-bg: rgba(245, 246, 249, 1);
+}
+
+:root.dark {
+  --bg: #071524;
+  --card-text: #69727b;
+  --card-sum: #eaeaea;
+  --card-number: #9ca1a8;
+  --card-icon: #111f2e;
+  --card-icon-color: brightness(0) invert(1);
+  --card-close-icon-color: #69727b;
+  --card-item: rgba(156, 163, 175, 1);
+  --card-title: rgba(255, 255, 255, 1);
+  --active-card-bg: rgba(245, 246, 249, 1);
+}
+
+.account_select_container {
+  background-color: var(--bg);
+  padding: 8px;
+  border-radius: 16px;
+
+  ion-list {
+    background-color: var(--bg);
+
+    ion-item {
+      --inner-border-width: 0;
+      border-radius: 16px;
+      --background: var(--bg);
+      color: var(--card-title);
+      --padding: 10px;
+      &.active {
+        border-radius: 16px;
+        --background: var(--active-card-bg);
+
+        .account-modal__text {
+          color: var(--card-title) !important;
+        }
+
+        .account-modal__balance {
+          color: rgba(156, 163, 175, 1) !important;
+        }
+        .number {
+          color: var(--card-title) !important;
+        }
+      }
+    }
+  }
+}
+
+.account-modal__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.account-modal__text {
+  --color: var(--card-text) !important;
+  font-size: 16px;
+  margin: 0;
+  line-height: 130%;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.account-modal__cardPan {
+    color: rgba(156, 163, 175, 1) !important;
+    font-size: 14px !important;
+    margin: 0;
+    line-height: 130%;
+    font-weight: 400 !important;
+    margin: 5px 0;
+}

@@ -1,0 +1,63 @@
+// Base styles for ion-input
+ion-input {
+  // For date type inputs
+  [type="date-time"],
+  [type="date"] {
+    min-height: 30px;
+    height: 30px;
+    line-height: 1;
+  }
+
+  // Styles for placeholder
+  ::placeholder {
+    font-size: 16px;
+  }
+  
+  // Styles for element with error
+  &.ion-touched.ion-invalid {
+    --background: var(--ion-input-danger-bg) !important;
+  }
+}
+
+// Form specific input styles
+form {
+  ion-input {
+    // For amount field
+    &[name="amount"] {
+      font-size: 22px;
+    }
+
+    // Badges inside input
+    & ~ ion-badge[slot="helper"] {
+      margin-top: 8px;
+      border-bottom-right-radius: 0;
+
+      &[size="medium"] {
+        height: 28px;
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+// Styles for ion-input inside ion-item
+ion-item {
+  ion-input {
+    // Styles for date in ion-item
+    [type="date-time"],
+    [type="date"] {
+      min-height: 30px;
+      height: 30px;
+      line-height: 1;
+    }
+  }
+  
+  // Common styles for ion-item with fill attribute
+  &[fill] {
+    --border-width: 0;
+    --inner-border-width: 0;
+    --border-radius: 8px;
+    --ion-item-background: var(--ion-input-bg);
+    margin-bottom: 16px;
+  }
+} 

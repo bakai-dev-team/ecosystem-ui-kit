@@ -1,0 +1,65 @@
+:root {
+  --ion-choice-card-bg: rgba(255, 255, 255, 1);
+  --ion-choice-card-option-bg: #f5f6f9;
+  --ion-choice-card-text-color: #1e1e1e;
+  --ion-choice-card-active-border: #007aff;
+  --ion-choice-card-icon-bg: rgba(245, 245, 245, 1);
+}
+
+:root.dark {
+  --ion-choice-card-bg: #1c1e24;
+  --ion-choice-card-option-bg: #262932;
+  --ion-choice-card-text-color: #ffffff;
+  --ion-choice-card-active-border: #0a84ff;
+  --ion-choice-card-icon-bg: rgba(38, 41, 50, 1);
+}
+
+
+.choice-card{
+    background-color: var(--ion-choice-card-bg);
+    border-radius: 16px;
+    padding: 4px;
+
+    &__option{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        
+
+        &__content{
+            display: flex;
+            align-items: center;
+            gap:12px;
+
+            &__icon{
+                width: 40px;
+                height: 40px;
+                border-radius: 24px;
+                background-color: var(--ion-choice-card-icon-bg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            p{
+                color: var(--ion-choice-card-text-color);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 130%;
+                ;
+            }
+        }
+
+        &__arrowRight{
+            width: 20px;
+            height: 20px;
+            color: rgba(65, 75, 89, 1);
+        }
+    }
+}

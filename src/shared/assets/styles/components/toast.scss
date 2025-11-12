@@ -1,0 +1,82 @@
+/* Toast Component Styles */
+ion-toast {
+  --min-height: 40px;
+  --border-radius: 5px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-left: 20px;
+  --padding-right: 20px;
+  --border-width: 2px 2px 2px 5px;
+  --border-style: solid;
+  --border-color: var(--ion-toast-color-info);
+  --background: transparent;
+  --white-space: pre-line;
+  color: var(--ion-text-color);
+  font-size: 14px;
+
+  &::part(container) {
+    background: transparent;
+  }
+
+  &::part(content) {
+    backdrop-filter: blur(7.5px);
+    background: var(--ion-toast-background-info);
+    border-left: 5px solid var(--ion-toast-color-info);
+    border-radius: var(--border-radius);
+  }
+
+  &[color="dark"] {
+    --border-color: var(--ion-toast-color-info);
+
+    &::part(content) {
+      background: var(--ion-toast-background-info);
+      border-left-color: var(--ion-toast-color-info);
+    }
+  }
+
+  &[color="primary"],
+  &[color="attention"] {
+    --border-color: var(--ion-toast-color-info);
+
+    &::part(content) {
+      background: var(--ion-toast-background-info);
+      border-left-color: var(--ion-toast-color-info);
+    }
+  }
+
+  &[color="success"] {
+    --border-color: var(--ion-toast-color-success);
+
+    &::part(content) {
+      background: var(--ion-toast-background-success);
+      border-left-color: var(--ion-toast-color-success);
+    }
+  }
+
+  &[color="warning"] {
+    --border-color: var(--ion-toast-color-warning);
+
+    &::part(content) {
+      background: var(--ion-toast-background-warning);
+      border-left-color: var(--ion-toast-color-warning);
+    }
+  }
+
+  &[color="danger"] {
+    --border-color: var(--ion-toast-color-danger);
+
+    &::part(content) {
+      background: var(--ion-toast-background-danger);
+      border-left-color: var(--ion-toast-color-danger);
+    }
+  }
+
+  &::part(message) {
+    white-space: var(--white-space);
+  }
+
+  &::part(button) {
+    font-size: 26px;
+    height: auto;
+  }
+}

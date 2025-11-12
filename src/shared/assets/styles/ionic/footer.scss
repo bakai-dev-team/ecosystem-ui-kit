@@ -1,0 +1,14 @@
+ion-footer {
+  -webkit-box-shadow: none;
+  padding: 8px 16px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  ion-toolbar {
+    --background: transparent !important;
+    padding: 0 !important;
+    --border-width: 0 !important;
+  }
+}
+ion-button.in-toolbar {
+  //--color: #FFFF !important;
+}

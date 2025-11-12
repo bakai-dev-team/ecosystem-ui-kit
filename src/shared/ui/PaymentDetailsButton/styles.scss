@@ -1,0 +1,36 @@
+:root {
+  --payment-button-bg: rgba(245, 245, 245, 1);
+  --payment-button-color: rgba(28, 30, 36, 1);
+  --payment-button-icon-color: rgba(65, 75, 89, 1);
+}
+
+:root.dark {
+  --payment-button-bg: rgba(28, 30, 36, 1);
+  --payment-button-color: rgba(245, 246, 249, 1);
+  --payment-button-icon-color: rgba(65, 75, 89, 1);
+}
+
+.payment-details-button {
+  background-color: var(--payment-button-bg);
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+ justify-content: center;
+ cursor: pointer;
+  &__label{
+    color: var(--payment-button-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+&__icon{
+    color: var(--payment-button-icon-color);
+     transform: rotate(90deg);
+     width: 20px;
+     height: 20px;
+}
+}

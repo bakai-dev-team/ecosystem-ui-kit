@@ -1,0 +1,80 @@
+:root {
+    --title: #8a8888b3;
+    --subtitle: #fff;
+    --card-bg: #EEF0F4;
+    --icon-color: #337DBB;
+}
+
+:root.dark {
+    --title: #8a8888b3;
+    --subtitle: #fff;
+    --card-bg: #122338;
+    --icon-color: #fff;
+}
+
+.info-card {
+    flex: 1 1 160px;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 0;
+    --background: var(--card-bg);
+    box-shadow: none;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__icon {
+        &__element {
+            color: var(--icon-color)
+        }
+    }
+
+    &__title {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--title);
+        margin-top: 5px;
+    }
+
+    &__total {
+        font-size: 12px;
+        color: var(--title);
+        margin: 0 !important;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 0 !important;
+        color: var(--subtitle);
+    }
+
+}
+.progress {
+  position: relative;
+  width: 57px;
+  height: 57px;
+
+  .CircularProgressbar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-card__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

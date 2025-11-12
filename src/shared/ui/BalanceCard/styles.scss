@@ -1,0 +1,26 @@
+:root.dark {
+    --bg: #071524;
+    --text: #EAEAEA;
+}
+
+:root {
+    --bg: #F7F8FA;
+    --text: #07203A;
+}
+
+.balance-card {
+    background: var(--bg);
+    margin: 0 0 20px;
+
+    &__content {
+        display: flex;
+    }
+
+    &__amount {
+        color: var(--text);
+    }
+
+    &__logo {
+        margin-right: 15px;
+    }
+}

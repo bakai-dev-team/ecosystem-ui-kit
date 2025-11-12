@@ -1,0 +1,36 @@
+.transparent-modal {
+  --background: transparent;
+  --ion-backdrop-color: transparent;
+
+  .modal-wrapper {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+ion-modal {
+  background: rgba(6, 6, 7, 0.60);
+  backdrop-filter: blur(2px);
+}
+
+ion-popover {
+  --border: none;
+
+  &.centered-popover {
+    --width: 90%;
+
+    &::part(content) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: var(--width);
+      max-width: 500px;
+    }
+
+    &::part(backdrop) {
+      --backdrop-opacity: 1;
+      background: rgba(6, 6, 7, 0.60);
+      backdrop-filter: blur(2px);
+    }
+  }
+}

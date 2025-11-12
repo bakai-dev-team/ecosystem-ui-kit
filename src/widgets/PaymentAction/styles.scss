@@ -1,0 +1,38 @@
+:root {
+  --payment-action-bg: rgba(255, 255, 255, 1);
+  --payment-action-icon-color: rgba(0, 122, 255, 1);
+}
+
+:root.dark {
+  --payment-action-bg: rgba(255, 255, 255, 1);
+  --payment-action-icon-color: rgba(0, 122, 255, 1);
+}
+
+.payment-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+
+.payment-action__arrow {
+  background: var(--payment-action-bg);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  &-icon {
+    color: var(--payment-action-icon-color);
+  }
+}
+
+.payment-action span {
+  color: #1c1e24;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}

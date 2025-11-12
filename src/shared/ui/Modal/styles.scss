@@ -1,0 +1,67 @@
+:root {
+  --ion-modal-bg: rgba(245, 245, 245, 1);
+  --ion-label-color: rgba(28, 30, 36, 1);
+  --ion-text-color: rgba(107, 114, 128, 1);
+}
+
+:root.dark {
+  --ion-modal-bg: rgba(23, 24, 25, 1);
+  --ion-label-color: rgba(245, 246, 249, 1);
+  --ion-text-color: rgba(156, 163, 175, 1);
+}
+
+.account-modal {
+  --backdrop-opacity: 0.4;
+  --border-radius: 20px;
+  --background: var(--ion-modal-bg);
+
+  .modal-content {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    padding: 16px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .modal-content-header {
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-content-header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-content-header-label {
+      font-size: 20px;
+      text-align: start;
+      font-weight: 600;
+      line-height: 130%;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      color: var(--ion-label-color);
+    }
+    .modal-content-header-right-label{
+        display: flex;
+        align-items: center;
+
+        .icon{
+            color: rgba(0, 122, 255, 1);
+        }
+
+        span{
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--ion-label-color);
+            line-height: 130%;
+        }
+    }
+    .modal-content-header-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      color: var(--ion-text-color);
+    }
+  }
+}

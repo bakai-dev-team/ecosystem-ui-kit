@@ -1,0 +1,75 @@
+:root {
+  --ion-toggle-bg: rgba(255, 255, 255, 1);
+  --ion-toggle-otp-bg: #f1f4f7;
+  --ion-toggle-danger-bg: rgba(239, 68, 68, 0.1);
+  --ion-toggle-text-color: #1e1e1e;
+}
+
+:root.dark {
+  --ion-toggle-bg: rgba(28, 30, 36, 1);
+  --ion-toggle-otp-bg: #30333a;
+  --ion-toggle-danger-bg: rgba(239, 68, 68, 0.15);
+  --ion-toggle-text-color: #ffffff;
+}
+
+.toggle {
+  background: var(--ion-toggle-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  width: 100%;
+  transition: all 0.2s ease;
+
+  p {
+    color: var(--ion-toggle-text-color);
+    font-weight: 400;
+  }
+
+  ion-toggle {
+    --background: #119d07;
+    --track-background-checked: rgba(34, 197, 94, 1) !important;
+    --handle-background: #ffffff;
+    --handle-background-checked: #ffffff;
+  }
+
+  /* --- Размеры --- */
+  &--lg {
+    padding: 20px;
+    height: 84px;
+
+    p {
+      font-size: 18px;
+    }
+
+    ion-toggle {
+      transform: scale(1.3);
+    }
+  }
+
+  &--md {
+    padding: 16px;
+    height: 74px;
+
+    p {
+      font-size: 16px;
+    }
+
+    ion-toggle {
+      transform: scale(1.1);
+    }
+  }
+
+  &--sm {
+    padding: 12px;
+    height: 60px;
+
+    p {
+      font-size: 14px;
+    }
+
+    ion-toggle {
+      transform: scale(0.95);
+    }
+  }
+}

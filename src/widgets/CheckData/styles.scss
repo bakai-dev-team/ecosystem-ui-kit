@@ -1,0 +1,39 @@
+:root {
+  --check-table-background: rgba(255, 255, 255, 1);
+  --check-table-item-border: rgba(160, 185, 205, 0.10);
+  --check-table-item-label-color: #6B7D8C;
+  --check-table-item-value-color: #07203A;
+}
+
+:root.dark {
+  --check-table-background: rgba(255, 255, 255, 1);
+  --check-table-item-border: rgba(160, 185, 205, 0.20);
+  --check-table-item-label-color: #B8BDC2;
+  --check-table-item-value-color: #EAEAEA;
+}
+
+.check-table {
+  overflow-y: auto;
+  background-color: var(--check-table-background);
+  padding: 16px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.check-table___item {
+  padding: 8.5px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.check-table___item-label {
+  color: var(--check-table-item-label-color);
+  font-size: 14px;
+}
+
+.check-table___item-value {
+  color: var(--check-table-item-value-color);
+  font-size: 14px;
+}

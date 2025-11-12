@@ -1,0 +1,79 @@
+:root {
+  --ion-input-bg: rgba(255, 255, 255, 1); // Standard background
+  --ion-input-otp-bg: #f1f4f7;
+  --ion-input-danger-bg: rgba(239, 68, 68, 0.1); // Red tint for errors
+  --search-color: #1e1e1e;
+}
+
+:root.dark {
+  --ion-input-bg: rgba(28, 30, 36, 1);
+  --ion-input-otp-bg: #30333a;
+  --ion-input-danger-bg: rgba(239, 68, 68, 0.15);
+  --search-color: #ffffff;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  padding: 0 16px;
+  height: 56px;
+  max-height: 56px;
+  width: 100%;
+  background-color: var(--ion-input-bg);
+  color: var(--input-color);
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &__icon {
+    font-size: 22px;
+    margin-right: 10px;
+    color: var(--input-color);
+  }
+
+  &__post-icon {
+    font-size: 22px;
+    color: var(--input-color);
+    cursor: pointer;
+  }
+
+  &__field {
+    flex: 1;
+    height: 100%;
+
+    ion-input {
+      --padding-start: 0;
+      --background: transparent;
+      --placeholder-color: var(--input-color);
+      height: 100%;
+      font-size: 16px;
+      color: var(--input-color);
+    }
+  }
+
+  &--error {
+    background-color: var(--ion-input-danger-bg);
+  }
+
+  &__error-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    bottom: -30px;
+    left: 4px;
+  }
+
+  &__error-icon {
+    color: rgba(239, 68, 68, 1);
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+  }
+
+  &__error {
+    font-size: 12px;
+    color: rgba(248, 113, 113, 1);
+  }
+}
+

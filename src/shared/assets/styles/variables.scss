@@ -1,0 +1,117 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+:root {
+  --ion-date-month-bg: #ffffff;
+  --ion-date-month-rgb: 256, 256, 256;
+  --ion-input-error-bg: #FEE8E8;
+  --ion-bg: #F5F6F9;
+  --ion-item-bg: #FFF;
+  --ion-main-text: #1C1E24;
+  --ion-secondary-text: #6B7280;
+  --ion-icon-bg: #F0F8FF;
+  --ion-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  // primary
+  --ion-color-primary: #005caa;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #004681;
+  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-alw: #005caa;
+  --ion-color-primary-contrast-bg-rgb: 47, 79, 103;
+  --ion-color-primary-gradient: linear-gradient(140deg, #005caa 19.1%, rgba(255, 255, 255, 0) 450.11%);
+  --ion-color-primary-gradient-rgb: linear-gradient(
+                  140deg,
+                  rgba(0, 92, 170, 0.5) 19.1%,
+                  rgba(255, 255, 255, 0) 450.11%
+  );
+
+  // danger
+  --ion-color-danger: #dd0014;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+  --ion-input-danger-bg: #FEE8E8;
+  --ion-color-danger-trans: rgba(250, 50, 50, 0.15);
+  --ion-color-danger-gradient: linear-gradient(140deg, #cf3c4f 19.1%, rgba(255, 255, 255, 0) 450.11%);
+  --ion-color-danger-gradient-rgb: linear-gradient(
+                  140deg,
+                  rgba(207, 60, 79, 0.5) 19.1%,
+                  rgba(255, 255, 255, 0) 450.11%
+  );
+
+  --ion-background-color: #F5F5F5;
+  --ion-background-color-step-50: #f5f5f5;
+  --ion-text-color: #07203A;
+  --ion-text-color-rgb: 0, 0, 0;
+  --ion-border-color: rgba(160, 185, 205, 0.25);
+
+  /* Toast Variables - Light Theme */
+  --ion-toast-background-success: rgba(114, 255, 163, 0.60);
+  --ion-toast-background-danger: rgba(255, 154, 155, 0.60);
+  --ion-toast-background-warning: rgba(255, 204, 103, 0.60);
+  --ion-toast-background-info: rgba(150, 235, 255, 0.60);
+  --ion-toast-color-success: #40E571;
+  --ion-toast-color-warning: #FF7C17;
+  --ion-toast-color-danger: #F45455;
+  --ion-toast-color-info: #287DE0;
+
+  --ion-popover-bg-color: #FFFFFF;
+  --ion-form-color-background: #F7F8FA;
+}
+
+:root.dark {
+  --ion-date-month-bg: black;
+  --ion-date-month-rgb: transparent;
+  --ion-input-error-bg: rgba(239, 68, 68, 0.10);
+  --ion-bg: #171819;
+  --ion-main-text: #F5F6F9;
+  --ion-item-bg: #1C1E24;
+  --ion-secondary-text: #9CA3AF;
+  --ion-icon-bg: #F0F8FF;
+  // primary
+  --ion-color-primary: #2787e8;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #004681;
+  --ion-color-primary-tint: #55a7f8;
+  --ion-color-primary-gradient: linear-gradient(148deg, #004681 15.33%, rgba(240, 240, 240, 0) 584.4%);
+  --ion-color-primary-gradient-rgb: linear-gradient(
+                  140deg,
+                  rgba(0, 70, 129, 0.5) 19.1%,
+                  rgba(255, 255, 255, 0) 450.11%
+  );
+
+  // danger
+  --ion-color-danger: #ff4961;
+  --ion-color-danger-rgb: 255, 73, 97;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #e04055;
+  --ion-color-danger-tint: #ff5b71;
+  --ion-input-danger-bg: #341b25;
+
+  --ion-background-color: #F5F5F5;
+  --ion-overlay-background-color: #001a2e;
+  --ion-background-color-step-50: #1a1a1a;
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+  --ion-border-color: rgba(160, 185, 205, 0.15);
+
+  /* Toast Variables - Dark Theme */
+  --ion-toast-background-success: rgba(1, 102, 31, 0.40);
+  --ion-toast-background-danger: rgba(106, 1, 1, 0.40);
+  --ion-toast-background-warning: rgba(255, 136, 44, 0.40);
+  --ion-toast-background-info: rgba(40, 125, 224, 0.40);
+  --ion-toast-color-success: #1FB34B;
+  --ion-toast-color-warning: #FF882C;
+  --ion-toast-color-danger: #F45455;
+  --ion-toast-color-info: #287DE0;
+  --ion-form-color-background: #202020;
+
+  --ion-popover-bg-color: #071424;
+}
