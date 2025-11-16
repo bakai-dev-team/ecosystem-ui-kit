@@ -1,22 +1,45 @@
-import Lottie from "lottie-react"
-import success from "@/shared/assets/animations/executed.json"
-import in_progress from "@/shared/assets/animations/process.json"
-import confirm_payment from "@/shared/assets/animations/draft.json"
-import error from "@/shared/assets/animations/rejected.json"
+import Lottie from "lottie-react";
+import { animations } from "../../shared/assets/animations";
+import "./styles.scss";
+const { success, in_progress, confirm_payment, error } = animations;
 
-export type TAnimatedStatusImgType = "success" | "error" | "in_progress" | "confirm_payment"
+export type TAnimatedStatusImgType =
+  | "success"
+  | "error"
+  | "in_progress"
+  | "confirm_payment";
+export type TAnimatedStatusSize = "sm" | "md" | "lg";
 interface IProps {
-    status: TAnimatedStatusImgType
-    loop?: boolean
+  status: TAnimatedStatusImgType;
+  loop?: boolean;
+  size?: TAnimatedStatusSize;
 }
 
 const statusMap = {
-    success,
-    error,
-    in_progress,
-    confirm_payment,
-} as const
+  success,
+  error,
+  in_progress,
+  confirm_payment,
+} as const;
 
-export const AnimatedStatusImg = ({ status, loop = false }: IProps) => (
-    <Lottie className="animated_status" animationData={statusMap[status]} loop={loop} />
-)
+const sizeMap = {
+  sm: 32,
+  md: 48,
+  lg: 64,
+} as const;
+
+export const AnimatedStatusImg = ({
+  status,
+  loop = false,
+  size = "md",
+}: IProps) => (
+  <Lottie
+    className="animated_status"
+    animationData={statusMap[status]}
+    loop={loop}
+    style={{
+      width: sizeMap[size],
+      height: sizeMap[size],
+    }}
+  />
+);

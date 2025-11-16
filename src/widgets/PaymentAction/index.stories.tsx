@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { PaymentAction } from "./index"
 import { IonApp, IonContent } from "@ionic/react"
-import { IconProvider } from "@/shared/assets/icons/IconProvider"
+import { IconProvider } from "../../shared/assets/icons/IconProvider"
 
 const meta: Meta<typeof PaymentAction> = {
   title: "UI/PaymentAction",

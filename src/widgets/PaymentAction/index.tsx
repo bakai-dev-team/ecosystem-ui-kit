@@ -1,4 +1,4 @@
-import { Icon } from "@/shared/assets/icons/Icon"
+import { Icon } from "../../shared/assets/icons/Icon"
 import { usePaymentAction } from "./model/usePaymentAction"
 import "./styles.scss"
 

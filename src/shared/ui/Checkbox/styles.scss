@@ -1,0 +1,80 @@
+:root {
+  --ion-checkbox-card-bg: rgba(255, 255, 255, 1);
+  --ion-checkbox-card-otp-bg: #f1f4f7;
+  --ion-checkbox-card-danger-bg: rgba(239, 68, 68, 0.1);
+  --ion-checkbox-card-text-color: #1e1e1e;
+}
+
+:root.dark {
+  --ion-checkbox-card-bg: rgba(28, 30, 36, 1);
+  --ion-checkbox-card-otp-bg: #30333a;
+  --ion-checkbox-card-danger-bg: rgba(239, 68, 68, 0.15);
+  --ion-checkbox-card-text-color: #ffffff;
+}
+
+.checkbox {
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+
+
+    &__text {
+      display: flex;
+      gap: 10px;
+
+      &__label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        color: var(--ion-checkbox-card-text-color);
+      }
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(209, 213, 219, 1);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--ion-checkbox-card-bg);
+        transition: all 0.2s ease;
+
+        &:checked {
+          background-color: #007aff;
+          border-color: #007aff;
+        }
+
+        &:checked::after {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background: var(--ion-checkbox-card-bg);
+          border-radius: 50%;
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+   &__icon{
+     width: 20px;
+     height: 20px;
+   }
+    }
+
+
+}

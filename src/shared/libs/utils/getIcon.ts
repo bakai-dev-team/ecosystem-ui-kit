@@ -1,6 +1,6 @@
-import elcart from "../../assets/icons/elcart.svg"
-import visa from "../../assets/icons/visa_gold.svg"
-import credit417 from "../../assets/icons/wallet.svg"
+import elcart from "../../assets/svg-icons/elcart.svg"
+import visa from "../../assets/svg-icons/visa_gold.svg"
+import credit417 from "../../assets/svg-icons/wallet.svg"
 
 export const getIcon = (accountImageName: string): string => {
   switch (accountImageName) {

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { TPaymentActionType } from "../index"
-import { ICON_TYPES } from "@/shared/assets/icons/types"
+import { ICON_TYPES } from "../../../shared/assets/icons/types"
 
 export const usePaymentAction = (type: TPaymentActionType) => {
   const { t } = useTranslation()

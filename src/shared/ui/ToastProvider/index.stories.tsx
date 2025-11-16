@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ToastProvider } from "./index";
 import "./styles.scss"
 import { IonApp, IonContent } from "@ionic/react";
-import { Toast } from "@/shared/libs/utils/Toast";
-import { IconProvider } from "@/shared/assets/icons/IconProvider";
+import { Toast } from "../../libs/utils/Toast";
+import { IconProvider } from "../../assets/icons/IconProvider";
 
 const meta: Meta<typeof ToastProvider> = {
   title: "UI/Toast",

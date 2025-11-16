@@ -10,9 +10,9 @@ import {
 
 import "./styles.scss";
 import { useTranslation } from "react-i18next";
-import { getIcon } from "@/shared/libs/utils/getIcon";
-import { MoneyHelper } from "@/shared/libs/utils/MoneyHelper";
-import { SomSpan } from "@/shared/ui/SomSpan";
+import { MoneyHelper } from "../../shared/libs/utils/MoneyHelper";
+import {getIcon} from "../../shared/libs/utils/getIcon"
+import { SomSpan } from "../../shared/ui/SomSpan";
 
 export type IAccountCard = {
   name: string;

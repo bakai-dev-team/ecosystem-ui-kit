@@ -1,0 +1,61 @@
+
+:root {
+  --ion-textarea-bg: rgba(255, 255, 255, 1);
+  --ion-textarea-placeholder-color: rgba(107, 114, 128, 1);
+  --ion-textarea-color: #1e1e1e;
+}
+
+:root.dark {
+  --ion-textarea-bg: rgba(28, 30, 36, 1);
+  --ion-textarea-placeholder-color: rgba(107, 114, 128, 1);
+  --ion-textarea-color: #ffffff;
+}
+
+.textarea {
+  border-radius: 14px;
+  border: 1px solid #e1e1e1;
+  background: var(--ion-textarea-bg);
+  padding: 12px 12px 21px 12px;
+  position: relative;
+
+  &-input {
+    background: transparent;
+    height: 100%;
+    min-height: 114px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--ion-textarea-color);
+    &::placeholder {
+      color: var(--ion-textarea-placeholder-color);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-amount {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 12px;
+    color: #999;
+    background: var(--ion-textarea-bg);
+    padding: 2px 4px;
+    border-radius: 4px;
+
+    &.warning {
+      color: #ff6b35;
+    }
+  }
+
+  &:focus-within {
+    border-color: transparent;
+    box-shadow: 0;
+  }
+}

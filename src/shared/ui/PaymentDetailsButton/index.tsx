@@ -1,6 +1,6 @@
+import { ICON_TYPES } from "../../assets/icons/types";
 import "./styles.scss";
 import { Icon } from "../../assets/icons/Icon";
-import { ICON_TYPES } from "../../assets/icons/types";
 
 interface IProps {
   label: string;

@@ -1062,3 +1062,5 @@ export const IconProvider = () => {
     </svg>
   );
 };
+
+export { ICON_TYPES };

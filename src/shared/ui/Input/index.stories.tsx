@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Input, ITextFieldTypes } from "./index";
 import {  ICON_TYPES } from "../../assets/icons/types"
 import { IonApp, IonContent } from "@ionic/react";
-import { IconProvider } from "@/shared/assets/icons/IconProvider";
+import { IconProvider } from "../../assets/icons/IconProvider";
 const meta: Meta<typeof Input> = {
   title: "UI/Input",
   component: Input,

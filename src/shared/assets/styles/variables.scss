@@ -6,7 +6,7 @@
   --ion-date-month-rgb: 256, 256, 256;
   --ion-input-error-bg: #FEE8E8;
   --ion-bg: #F5F6F9;
-  --ion-item-bg: #FFF;
+  --ion-item-bg: rgba(255, 255, 255, 1);
   --ion-main-text: #1C1E24;
   --ion-secondary-text: #6B7280;
   --ion-icon-bg: #F0F8FF;
@@ -71,7 +71,7 @@
   --ion-main-text: #F5F6F9;
   --ion-item-bg: #1C1E24;
   --ion-secondary-text: #9CA3AF;
-  --ion-icon-bg: #F0F8FF;
+  --ion-icon-bg:rgba(240, 248, 255, 1);
   // primary
   --ion-color-primary: #2787e8;
   --ion-color-primary-rgb: 56, 128, 255;

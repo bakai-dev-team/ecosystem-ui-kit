@@ -44,13 +44,13 @@ const Template: StoryFn<typeof ChoiceCard> = (args) => {
   return <ChoiceCard {...args} onClick={handleClick} />;
 };
 
-export const Default = Template.bind({});
+export const Default: StoryFn<typeof ChoiceCard> = Template.bind({});
 Default.args = {
   options,
   icon_color: "rgba(0, 122, 255, 1)",
 };
 
-export const Dark = Template.bind({});
+export const Dark: StoryFn<typeof ChoiceCard> = Template.bind({});
 Dark.args = {
   options,
   icon_color: "rgba(10, 132, 255, 1)",

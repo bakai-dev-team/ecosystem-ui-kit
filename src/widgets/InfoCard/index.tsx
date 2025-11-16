@@ -1,8 +1,8 @@
 import React from 'react';
 import { IonCard, IonCardContent } from '@ionic/react';
 import './styles.scss';
-import { ICON_TYPES } from '@/shared/assets/icons/types';
-import { Icon } from '@/shared/assets/icons/Icon';
+import { ICON_TYPES } from '../../shared/assets/icons/types';
+import { Icon } from '../../shared/assets/icons/Icon';
 
 interface IProps {
   value: number;
