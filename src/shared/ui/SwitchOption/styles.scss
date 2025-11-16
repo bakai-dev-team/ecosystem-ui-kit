@@ -1,0 +1,44 @@
+:root {
+  --switch-option-bg: #fff;
+  --switch-option-track-bg: #E5E7EB;
+  --switch-option-label: #1C1E24;
+}
+
+:root.dark {
+  --switch-option-bg: #1C1E24;
+  --switch-option-track-bg: #282D35;
+  --switch-option-label: #F5F6F9;
+}
+
+.switch-option{
+  --background: var(--switch-option-bg);         
+  --border-radius: 16px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-bottom: 16px;
+  --padding-top: 16px;
+  width: 100%;
+  border: none;
+
+
+}
+
+.switch-option__label{
+  color: var(--switch-option-label);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.switch-option ion-toggle{
+  --track-background: var(--switch-option-track-bg);
+  --track-background-checked: #4ADE80;
+  --handle-background: #ffffff;
+  --handle-background-checked: #ffffff;
+  --track-width: 52px;
+  --track-height: 28px;
+  --handle-width: 25px;
+  --handle-height: 25px;
+  --handle-box-shadow: none;
+  --track-border-radius: 999px;
+}

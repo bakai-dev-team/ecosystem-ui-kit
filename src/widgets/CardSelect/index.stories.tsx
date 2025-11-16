@@ -32,7 +32,7 @@ const mockAccounts: IAccountCard[] = [
   },
   {
     name: "Ислам Карта Элкарт",
-    imageName: "элкарт",
+    imageName: "DEPOSITE",
     accountNo: "987654321",
     cardPan: "543212******1234",
     balance: 4200,
@@ -57,7 +57,7 @@ export const Default: Story = {
   },
   render: (args) => (
     <IonApp>
-      <div style={{ width: "500px",  }}>
+      <div style={{ width: "500px", maxWidth: "100%" }}>
         <CardSelect {...args} />
       </div>
     </IonApp>
@@ -72,7 +72,7 @@ export const HideBalance: Story = {
   },
   render: (args) => (
     <IonApp>
-      <div style={{ width: "500px", }}>
+      <div style={{ width: "500px", maxWidth: "100%" }}>
         <CardSelect {...args} />
       </div>
     </IonApp>
@@ -87,7 +87,7 @@ export const Loading: Story = {
   },
   render: (args) => (
     <IonApp>
-      <div style={{ width: "500px",  }}>
+      <div style={{ width: "500px", maxWidth: "100%" }}>
         <CardSelect {...args} />
       </div>
     </IonApp>
@@ -102,7 +102,7 @@ export const EmptyList: Story = {
   },
   render: (args) => (
     <IonApp>
-      <div style={{ width: "500px",  }}>
+      <div style={{ width: "500px", maxWidth: "100%" }}>
         <CardSelect {...args} />
       </div>
     </IonApp>

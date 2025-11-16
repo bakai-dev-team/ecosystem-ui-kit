@@ -1,73 +1,159 @@
-# React + TypeScript + Vite
+# @bakai-ecosystem-zhainak/ui-kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React UI Kit библиотека компонентов для экосистемы Bakai
 
-Currently, two official plugins are available:
+## 📦 Установка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install @bakai-ecosystem-zhainak/ui-kit
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Быстрый старт
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+import { Button, Input } from '@bakai-ecosystem-zhainak/ui-kit';
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+function App() {
+  return (
+    <div>
+      <Button onClick={() => console.log('Clicked!')}>
+        Нажми меня
+      </Button>
+      <Input placeholder="Введите текст" />
+    </div>
+  );
+}
+
+```
+
+
+## Компоненты
+Button
+Кнопка с различными вариантами стилей
+
+```
+import { Button } from '@bakai-ecosystem-zhainak/ui-kit';
+
+<Button 
+  variant="primary" 
+  size="medium"
+  onClick={() => {}}
+>
+  Текст кнопки
+</Button>
+```
+Props:
+
+variant: 'primary' | 'secondary' | 'outline' (default: 'primary')
+
+size: 'small' | 'medium' | 'large' (default: 'medium')
+
+disabled: boolean (default: false)
+
+onClick: () => void
+
+## Стилизация
+Библиотека включает SCSS стили. Убедитесь что ваш проект поддерживает SCSS.
+
+## Разработка
+Установка для разработки
+
+```bash
+git clone https://gitlab.com/nurlanuuluzajnak75/ui-kit.git
+cd ui-kit
+npm install
+npm run dev
+```
+
+## Сборка
+```bash
+npm run build
+```
+## Лицензия
+
+
+
+## package.json 
+
+```json
+{
+  "name": "@bakai-ecosystem-zhainak/ui-kit",
+  "version": "1.0.4",
+  "description": "React UI Kit библиотека компонентов для экосистемы Bakai",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-])
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "ui-kit", 
+    "components",
+    "bakai",
+    "typescript"
+  ],
+  "author": "Zhainak Nurlanov <nurlanuuluzajnak75@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/nurlanuuluzajnak75/ui-kit.git"
+  },
+  "homepage": "https://gitlab.com/nurlanuuluzajnak75/ui-kit#readme",
+  "bugs": {
+    "url": "https://gitlab.com/nurlanuuluzajnak75/ui-kit/issues"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run build:js && npm run build:types && npm run copy:styles && npm run copy:assets",
+    "build:js": "tsc --project tsconfig.build.json --outDir dist --skipLibCheck",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist --skipLibCheck",
+    "copy:styles": "node copy-styles.cjs",
+    "copy:assets": "node copy-assets.cjs",
+    "dev": "vite",
+    "build:app": "vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-url": "^8.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "typescript": "^5.0.0",
+    "sass": "^1.60.0",
+    "fs-extra": "^11.0.0",
+    "@storybook/react": "^7.0.0",
+    "@storybook/addon-essentials": "^7.0.0",
+    "@storybook/addon-interactions": "^7.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/test": "^7.0.0",
+    "storybook": "^7.0.0"
+  }
+}
+```
+## 📖 Storybook документация
+
+Для просмотра всех компонентов и примеров использования:
+
+```bash
+npm run storybook
 ```

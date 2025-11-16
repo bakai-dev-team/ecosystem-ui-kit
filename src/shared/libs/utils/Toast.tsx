@@ -23,8 +23,8 @@ const getOptions = (opts?: ToastOptions): ToastOptions => ({
 const renderContent = (type: ToastType, messageKey: string, subtitleKey?: string) => (
   <div className="toast-content">
     <div className="toast-text">
-      <div className="toast-title">{i18next.t(messageKey)}</div>
-      {subtitleKey && <div className="toast-subtitle">{i18next.t(subtitleKey)}</div>}
+      <div className="toast-title">{messageKey}</div>
+      {subtitleKey && <div className="toast-subtitle">{subtitleKey}</div>}
     </div>
     <div className="toast-icon">
       {type === "success" &&  <Icon type={ICON_TYPES.toast_success}/>}

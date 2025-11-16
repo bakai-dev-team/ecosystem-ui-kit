@@ -24,7 +24,7 @@
 .Toastify__toast--warning {
   max-width: calc(100% - 32px);
   margin: 15px auto 0;
-  border-radius: 5px !important;
+  border-radius: 14px !important;
   background: var(--toast-bg) !important;
   backdrop-filter: blur(7.5px) !important;
 
@@ -36,7 +36,7 @@
 .Toastify__toast--success {
   max-width: calc(100% - 32px);
   margin: 15px auto 0;
-  border-radius: 5px !important;
+  border-radius: 14px !important;
   background: var(--toast-bg) !important;
   backdrop-filter: blur(7.5px) !important;
   color: var(--toast-title);
@@ -49,7 +49,7 @@
 .Toastify__toast--info {
   max-width: calc(100% - 32px);
   margin: 15px auto 0;
-  border-radius: 5px !important;
+  border-radius: 14px !important;
   background: var(--toast-bg) !important;
   backdrop-filter: blur(7.5px) !important;
 

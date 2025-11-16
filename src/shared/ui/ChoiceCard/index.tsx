@@ -1,6 +1,6 @@
 import { Icon } from "../../assets/icons/Icon";
-import { ICON_TYPES } from "../../assets/icons/types";
 import "./styles.scss";
+import { ICON_TYPES } from "../../assets/icons/types";
 
 export interface Option {
   value: string;

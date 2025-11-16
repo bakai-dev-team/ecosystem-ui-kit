@@ -1,12 +1,13 @@
-import { AnimatedStatusImg } from "@/widgets"
-
+import {setupIonicReact} from "@ionic/react";
+import "./shared/assets/styles/styles.scss";
+setupIonicReact();
 function App() {
 
+
   return (
- <>
- <AnimatedStatusImg status="confirm_payment"/>
- </>
-  )
+    <>
+    </>
+  );
 }
 
-export default App
+export default App;

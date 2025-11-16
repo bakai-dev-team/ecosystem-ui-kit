@@ -38,6 +38,7 @@
       --background: var(--bg);
       color: var(--card-title);
       --padding: 10px;
+      width: 100%;
       &.active {
         border-radius: 16px;
         --background: var(--active-card-bg);

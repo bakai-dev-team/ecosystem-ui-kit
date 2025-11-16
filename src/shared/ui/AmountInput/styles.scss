@@ -1,15 +1,15 @@
 :root {
   --bg: rgba(255, 255, 255, 1);
-  --text: #2D465B;
-  --label_currency:#DBE5F5;
-  --label_currency__color:#005CAA;
+  --text: #2d465b;
+  --label_currency: #dbe5f5;
+  --label_currency__color: #005caa;
 }
 
 :root.dark {
   --bg: rgba(28, 30, 36, 1);
-  --text: #B8BDC2;
-  --label_currency:#1A3A50;
-  --label_currency__color:#EAEAEA;
+  --text: #b8bdc2;
+  --label_currency: #1a3a50;
+  --label_currency__color: #eaeaea;
 }
 
 .wrapper {
@@ -22,8 +22,6 @@
 .wrapper.error {
   --background: rgba(255, 0, 0, 0.1);
 }
-
-
 
 .label {
   position: absolute;
@@ -38,10 +36,9 @@
   align-items: center;
   width: auto;
   height: auto;
-
-  p{
+ margin-top: 20px;
+  p {
     color: rgba(156, 163, 175, 1) !important;
-
   }
 }
 
@@ -53,8 +50,18 @@
   margin-bottom: 40px;
   color: var(--text);
   width: 100%;
-
 }
+
+.amount-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.amount-input input[type="number"]::-webkit-inner-spin-button,
+.amount-input input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 .amount-wrapper {
   display: flex;
@@ -63,6 +70,3 @@
   height: 105px;
   width: 100%;
 }
-
-
-

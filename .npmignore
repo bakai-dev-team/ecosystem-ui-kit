@@ -1,0 +1,11 @@
+node_modules/
+storybook/
+src/
+.vite/
+*.stories.tsx
+*.log
+vite.config.ts
+rollup.config.js
+tsconfig.json
+src/App.tsx
+src/main.tsx

@@ -1,6 +1,6 @@
-import { ICON_TYPES } from "@/shared/assets/icons/types"
-import "./styles.scss"
-import { Icon } from "@/shared/assets/icons/Icon"
+import { ICON_TYPES } from "../../shared/assets/icons/types"
+import  "./styles.scss"
+import { Icon } from "../../shared/assets/icons/Icon"
 
 export const AccountSelector = () => {
   return (
