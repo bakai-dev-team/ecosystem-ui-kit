@@ -12,19 +12,21 @@
   --btn-monochrome-background-activated: #1f2020;
   --btn-monochrome-color: #ffffff;
 
-  --btn-solid-background: #EEF0F4;
-  --btn-solid-background-activated: #EEF0F4;
-  --btn-solid-color: #005CAA;
+  --btn-solid-background: #007AFF1A;
+  --btn-solid-background-activated: #007AFF1A;
+  --btn-solid-color: #007AFF;
+  --btn-shadow-top:0px -4px 4px 0px rgba(255, 255, 255, 0.2);
+  --btn-shadow-bottom:0px 1px 4px 0px rgba(255, 255, 255, 0.25);
 
   /* SIZES */
   --btn-sm-padding: 6px;
-  --btn-sm-font-size: 12px;
+  --btn-sm-font-size: 14px;
 
   --btn-md-padding: 10px;
-  --btn-md-font-size: 14px;
+  --btn-md-font-size: 16px;
 
   --btn-lg-padding: 12px;
-  --btn-lg-font-size: 16px;
+  --btn-lg-font-size: 18px;
 }
 
 :root.dark {
@@ -41,9 +43,11 @@
   --btn-monochrome-background-activated: #e0e0e0;
   --btn-monochrome-color: #151616;
 
-  --btn-solid-background: #111E2E;
-  --btn-solid-background-activated: #111E2E;
-  --btn-solid-color: #2E8FE2;
+  --btn-solid-background: #262932;
+  --btn-solid-background-activated: #262932;
+  --btn-solid-color: #007AFF;
+  --btn-shadow-top:none;
+  --btn-shadow-bottom:none;
 }
 
 .btn {
@@ -57,8 +61,11 @@
   gap: 8px !important;
   padding: 0 !important;
   border: none !important;
-    --box-shadow: 0px -4px 4px 0px rgba(255, 255, 255, 0.2) !important;
-  --box-shadow: 0px 1px 4px 0px rgba(255, 255, 255, 0.25) !important;
+  font-weight: bold;
+  text-transform: capitalize !important;
+
+    --box-shadow: var(--btn-shadow-top) !important;
+  --box-shadow:var(--btn-shadow-bottom) !important;
 }
 .btn-primary {
   --background: var(--btn-primary-background);

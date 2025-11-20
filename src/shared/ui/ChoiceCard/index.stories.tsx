@@ -1,5 +1,5 @@
-import { Meta, StoryFn } from "@storybook/react";
-import { ChoiceCard, Option } from "./index";
+import { type Meta, type StoryFn } from "@storybook/react";
+import { ChoiceCard, type Option } from "./index";
 import { ICON_TYPES } from "../../assets/icons/types";
 import { IonApp, IonContent } from "@ionic/react";
 import { IconProvider } from "../../assets/icons/IconProvider";

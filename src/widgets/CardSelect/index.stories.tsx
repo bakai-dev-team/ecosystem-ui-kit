@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CardSelect, IAccountCard } from "./index";
+import { CardSelect, type IAccountCard } from "./index";
 import { IonApp } from "@ionic/react";
 
 const meta: Meta<typeof CardSelect> = {

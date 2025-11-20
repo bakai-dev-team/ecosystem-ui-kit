@@ -1,0 +1,74 @@
+:root {
+  --ion-date-wheel-picker-bg: #FFFFFF;
+  --ion-date-wheel-picker-text-color: #1e1e1e;
+  --ion-date-picker-in-range-bg:#007AFF1A;
+}
+
+:root.dark {
+  --ion-date-wheel-picker-bg: #1C1E24;
+  --ion-date-wheel-picker-text-color: #ffffff;
+  --ion-date-picker-in-range-bg:#007AFF1A;
+}
+
+
+
+.date-card {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  background: var(--ion-date-wheel-picker-bg);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wheel-column {
+  flex: 1;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  text-align: center;
+  scroll-behavior: smooth;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.wheel-column::-webkit-scrollbar {
+  display: none;
+}
+
+.wheel-item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;
+  transition: all 0.2s ease;
+}
+
+.wheel-item.active {
+  font-size: 18px;
+  color: var(--ion-date-wheel-picker-text-color);
+  font-weight: 600;
+}
+
+.date-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 48px;
+  transform: translateY(-50%);
+  border-top: 2px solid #007AFF;
+  border-bottom: 2px solid #007AFF;
+  opacity: .5;
+  pointer-events: none;
+}
+

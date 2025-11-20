@@ -30,11 +30,12 @@
 }
 
 :root.dark {
-  --bottomshhep-picker-active-bg: #262932;
+  --bottomshhep-picker-active-bg: #171819;
 }
 
 html {
   height: 100vh !important;
+  background: red !important;
 }
 
 .page-container {
@@ -224,8 +225,8 @@ html {
 }
 
 ion-header {
-  padding: var(--ion-safe-area-top) 10px 0 10px !important;
-  background-color: var(--ion-bg) !important;
+  //padding: var(--ion-safe-area-top) 10px 0 10px !important;
+  //background-color: var(--ion-bg) !important;
   box-shadow: none !important;
 
   ion-toolbar {
@@ -237,7 +238,7 @@ ion-header {
 
 
 ion-footer {
-  background-color: var(--ion-bg) !important;
+  //background-color: var(--ion-bg) !important;
   box-shadow: none !important;
   padding-bottom: 32px;
 
@@ -416,10 +417,9 @@ ion-searchbar {
 //   --padding-start: 12px !important;
 // }
 
-ion-modal {
-  background: rgba(0, 0, 0, 0.2) !important;
-  backdrop-filter: blur(0);
-}
+
+
+
 
 .risk-select-btn {
   margin-bottom: 15px;

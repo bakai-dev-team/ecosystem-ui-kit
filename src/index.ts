@@ -27,5 +27,6 @@ export { PhonePicker } from "./widgets/PhonePicker";
 export { StoryTabs } from "./widgets/StoryTabs";
 export {IconProvider} from "./shared/assets/icons/IconProvider";
 export {Select} from "./shared/ui/Select";
-export  {Checkbox} from "./shared/ui/Checkbox"
+export  {Checkbox} from "./shared/ui/Checkbox";
+export {DatePicker} from "./shared/ui/DatePicker"
 

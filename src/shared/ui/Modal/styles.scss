@@ -10,10 +10,11 @@
   --ion-text-color: rgba(156, 163, 175, 1);
 }
 
-.account-modal {
+.fixed-modal {
   --backdrop-opacity: 0.4;
   --border-radius: 20px;
   --background: var(--ion-modal-bg);
+
 
   .modal-content {
     border-radius: 20px 20px 0 0;
@@ -22,6 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: auto;
 
     .modal-content-header {
       display: flex;
@@ -65,3 +67,6 @@
     }
   }
 }
+
+
+

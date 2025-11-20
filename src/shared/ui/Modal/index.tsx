@@ -1,39 +1,39 @@
 import { IonModal } from "@ionic/react";
 import "./styles.scss";
-import  { ReactNode } from "react";
+import {ReactNode, useRef} from "react";
 import { Icon } from "../../assets/icons/Icon";
+import {gitBranch} from "ionicons/icons";
 
 
 type TProps = {
   isOpen: boolean;
   onClose: () => void;
-  initialBreakpoint?: number;
   label?: string;
   actionIcon?:any;
   actionText?:string;
   text?: string;
   children: ReactNode;
   onActionClick?: () => void;
+  className?:string;
 };
 
 export const Modal = ({
   isOpen,
   onClose,
-  initialBreakpoint = 0.5,
   children,
   label,
   text,
   actionIcon,
   actionText,
-  onActionClick
+  onActionClick,
+  className
 }: TProps) => {
   return (
     <IonModal
-      isOpen={isOpen}   
-      onDidDismiss={onClose}
-      className="account-modal"
-      breakpoints={[0, 0.5, 0.9]}
-      initialBreakpoint={initialBreakpoint}
+        isOpen={isOpen}
+        onDidDismiss={onClose}
+        className={`fixed-modal ${className}`}
+        backdropDismiss={true}
     >
       <div className="modal-content">
         <div className="modal-content-header">

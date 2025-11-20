@@ -50,10 +50,7 @@ const meta: Meta<typeof Checkbox> = {
 
 export default meta;
 
-/**
- * Базовый пример использования компонента Checkbox.
- * Демонстрирует работу с массивом элементов, обработку изменений и кликов по действиям.
- */
+
 export const Default: StoryObj = {
     render: () => {
         const [items, setItems] = useState([
@@ -74,11 +71,7 @@ export const Default: StoryObj = {
             },
         ]);
 
-        /**
-         * Обрабатывает изменение состояния чекбокса
-         * @param value
-         * @param checked - новое состояние чекбокса
-         */
+
         const handleSelect = (value: string, checked: boolean) => {
             setItems(prev =>
                 prev.map(item =>
@@ -87,9 +80,7 @@ export const Default: StoryObj = {
             );
         };
 
-        /**
-         * Обрабатывает клик по кнопке действия
-         */
+
         const handleActionClick = () => {
             alert("Action button clicked");
         };
@@ -107,9 +98,7 @@ export const Default: StoryObj = {
     },
 };
 
-/**
- * Пример с отключенными чекбоксами
- */
+
 export const Disabled: StoryObj = {
     render: () => {
         const [items] = useState([
@@ -142,9 +131,7 @@ export const Disabled: StoryObj = {
     },
 };
 
-/**
- * Пример с группировкой чекбоксов
- */
+
 export const Grouped: StoryObj = {
     render: () => {
         const [transportItems, setTransportItems] = useState([
