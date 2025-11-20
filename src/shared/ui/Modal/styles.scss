@@ -22,7 +22,6 @@
     padding: 16px !important;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     height: auto;
 
     .modal-content-header {
@@ -41,7 +40,7 @@
       font-weight: 600;
       line-height: 130%;
       margin-top: 6px;
-      margin-bottom: 6px;
+      margin-bottom: 16px;
       color: var(--ion-label-color);
     }
     .modal-content-header-right-label{

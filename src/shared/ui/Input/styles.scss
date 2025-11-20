@@ -3,6 +3,8 @@
   --ion-input-otp-bg: #f1f4f7;
   --ion-input-danger-bg: rgba(239, 68, 68, 0.1); // Red tint for errors
   --search-color: #1e1e1e;
+  --input-color:#9CA3AF;
+  --input-text-color:#000000;
 }
 
 :root.dark {
@@ -10,18 +12,19 @@
   --ion-input-otp-bg: #30333a;
   --ion-input-danger-bg: rgba(239, 68, 68, 0.15);
   --search-color: #ffffff;
+  --input-color:#6B7280;
+  --input-text-color:#FFFFFF;
 }
 
 .input {
   display: flex;
   align-items: center;
   border-radius: 14px;
-  padding: 0 16px;
+  padding: 14px 12px;
   height: 56px;
   max-height: 56px;
   width: 100%;
   background-color: var(--ion-input-bg);
-  color: var(--input-color);
   position: relative;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
@@ -44,10 +47,21 @@
     ion-input {
       --padding-start: 0;
       --background: transparent;
-      --placeholder-color: var(--input-color);
       height: 100%;
-      font-size: 16px;
-      color: var(--input-color);
+
+    }
+
+    label{
+      .label-text-wrapper, sc-ion-input-ios{
+        color: var(--input-color);
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .native-wrapper, sc-ion-input-ios,sc-ion-input-ios-s{
+       color: var(--input-text-color);
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
   }
 

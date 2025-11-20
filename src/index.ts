@@ -28,5 +28,6 @@ export { StoryTabs } from "./widgets/StoryTabs";
 export {IconProvider} from "./shared/assets/icons/IconProvider";
 export {Select} from "./shared/ui/Select";
 export  {Checkbox} from "./shared/ui/Checkbox";
-export {DatePicker} from "./shared/ui/DatePicker"
+export {DatePicker} from "./shared/ui/DatePicker";
+export {NumberCategoryOptions} from "./shared/ui/NumberCategoryOptions"
 

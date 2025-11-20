@@ -1,17 +1,17 @@
-# @bakai-ecosystem-zhainak/ui-kit
+# @bakai-ecosystem/ui-kit
 
 React UI Kit библиотека компонентов для экосистемы Bakai
 
 ## 📦 Установка
 
 ```bash
-npm install @bakai-ecosystem-zhainak/ui-kit
+npm install @bakai-ecosystem/ui-kit
 ```
 
 ## Быстрый старт
 
 ```
-import { Button, Input } from '@bakai-ecosystem-zhainak/ui-kit';
+import { Button, Input } from '@bakai-ecosystem/ui-kit';
 
 function App() {
   return (
@@ -32,7 +32,7 @@ Button
 Кнопка с различными вариантами стилей
 
 ```
-import { Button } from '@bakai-ecosystem-zhainak/ui-kit';
+import { Button } from '@bakai-ecosystem/ui-kit';
 
 <Button 
   variant="primary" 
@@ -59,7 +59,7 @@ onClick: () => void
 Установка для разработки
 
 ```bash
-git clone https://gitlab.com/nurlanuuluzajnak75/ui-kit.git
+git clone https://github.com/bakai-dev-team/ecosystem-ui-kit.git
 cd ui-kit
 npm install
 npm run dev
@@ -77,7 +77,7 @@ npm run build
 
 ```json
 {
-  "name": "@bakai-ecosystem-zhainak/ui-kit",
+  "name": "@bakai-ecosystem/ui-kit",
   "version": "1.0.4",
   "description": "React UI Kit библиотека компонентов для экосистемы Bakai",
   "type": "module",
@@ -101,25 +101,20 @@ npm run build
     "bakai",
     "typescript"
   ],
-  "author": "Zhainak Nurlanov <nurlanuuluzajnak75@gmail.com>",
+  "author": "Zhainak Nurlan nurlanuuluzajnak75@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/nurlanuuluzajnak75/ui-kit.git"
-  },
-  "homepage": "https://gitlab.com/nurlanuuluzajnak75/ui-kit#readme",
-  "bugs": {
-    "url": "https://gitlab.com/nurlanuuluzajnak75/ui-kit/issues"
+    "url": "https://github.com/bakai-dev-team/ecosystem-ui-kit.git"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run build:js && npm run build:types && npm run copy:styles && npm run copy:assets",
+    "build": "npm run build:js && npm run build:types && npm run copy:styles && npm run copy:svg-icons",
     "build:js": "tsc --project tsconfig.build.json --outDir dist --skipLibCheck",
     "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist --skipLibCheck",
-    "copy:styles": "node copy-styles.cjs",
-    "copy:assets": "node copy-assets.cjs",
+    "copy:svg-icons": "node copy-svg-icons.mjs",
+    "copy:styles": "node copy-styles.mjs",
     "dev": "vite",
-    "build:app": "vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
