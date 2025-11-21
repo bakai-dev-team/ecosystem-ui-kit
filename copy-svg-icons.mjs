@@ -6,24 +6,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function copySvgIcons() {
-  console.log('🚀 Starting to copy SVG icon files...');
+  console.log('Starting to copy SVG icon files...');
   
   const sourceDir = path.join(__dirname, 'src', 'shared', 'assets', 'svg-icons');
   const targetDir = path.join(__dirname, 'dist', 'shared', 'assets', 'svg-icons');
 
   try {
     if (!await fs.pathExists(sourceDir)) {
-      console.log('❌ Source SVG icons directory does not exist:', sourceDir);
+      console.log('Source SVG icons directory does not exist:', sourceDir);
       return;
     }
 
-    console.log(`📁 Source: ${sourceDir}`);
-    console.log(`📁 Target: ${targetDir}`);
-    
-    // Создаем целевую папку если не существует
+    console.log(`Source: ${sourceDir}`);
+    console.log(`Target: ${targetDir}`);
+  
     await fs.ensureDir(targetDir);
     
-    // Копируем все файлы из папки svg-icons
     const items = await fs.readdir(sourceDir);
     let copiedCount = 0;
     
@@ -33,14 +31,14 @@ async function copySvgIcons() {
       
       if ((await fs.stat(sourcePath)).isFile()) {
         await fs.copy(sourcePath, targetPath);
-        console.log(`✅ Copied: ${item}`);
+        console.log(`Copied: ${item}`);
         copiedCount++;
       }
     }
     
-    console.log(`🎉 Successfully copied ${copiedCount} SVG icon files`);
+    console.log(`Successfully copied ${copiedCount} SVG icon files`);
   } catch (error) {
-    console.error('❌ Error copying SVG icons:', error);
+    console.error('Error copying SVG icons:', error);
   }
 }
 
