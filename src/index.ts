@@ -30,4 +30,5 @@ export {Select} from "./shared/ui/Select";
 export  {Checkbox} from "./shared/ui/Checkbox";
 export {DatePicker} from "./shared/ui/DatePicker";
 export {NumberCategoryOptions} from "./shared/ui/NumberCategoryOptions"
+export {HistoryItem} from "./shared/ui/HistoryItem"
 
