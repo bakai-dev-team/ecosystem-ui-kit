@@ -17,7 +17,6 @@ export { TextArea } from "./shared/ui/TextArea";
 export { SwitchOption } from "./shared/ui/SwitchOption";
 export { CardWithImage } from "./shared/ui/CardWidthImage";
 export { AnimatedStatusImg } from "./widgets/AnimatedStatusImg";
-export { AccountSelector } from "./widgets/AccountSelector";
 export { CardSelect } from "./widgets/CardSelect";
 export { CustomTabs } from "./widgets/CustomTabs";
 export { InfoCard } from "./widgets/InfoCard";
@@ -31,4 +30,5 @@ export  {Checkbox} from "./shared/ui/Checkbox";
 export {DatePicker} from "./shared/ui/DatePicker";
 export {NumberCategoryOptions} from "./shared/ui/NumberCategoryOptions"
 export {HistoryItem} from "./shared/ui/HistoryItem"
+export  {AccountCard} from "./widgets/AccountCard"
 
