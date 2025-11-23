@@ -5,9 +5,8 @@ import postcss from "rollup-plugin-postcss";
 import { dts } from "rollup-plugin-dts";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import copy from "rollup-plugin-copy";
-import json from "@rollup/plugin-json"; // ← Добавьте эту строку
+import json from "@rollup/plugin-json"; 
 
-// Основная сборка JavaScript
 const jsConfig = {
   input: "src/index.ts",
   output: {
@@ -29,7 +28,7 @@ const jsConfig = {
       declaration: false,
     }),
     postcss({
-      extract: true, // Извлекаем CSS в отдельный файл
+      extract: true, 
       minimize: false,
       use: ['sass'],
       sourceMap: true,
@@ -41,13 +40,11 @@ const jsConfig = {
           dest: "dist/shared/assets/icons" 
         }
       ],
-      hook: 'writeBundle' // Копируем после создания bundle
+      hook: 'writeBundle' 
     })
   ],
-  external: ["react", "react-dom", "react-toastify"], // Добавляем внешние зависимости
-};
+  external: ["react", "react-dom", "react-toastify"], 
 
-// Сборка типов
 const dtsConfig = {
   input: "src/index.ts",
   output: {
