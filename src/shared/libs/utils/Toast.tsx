@@ -1,5 +1,4 @@
 import { toast, ToastOptions, Id as ToastId } from "react-toastify"
-import i18next from "i18next"
 import {Icon} from "../../assets/icons/Icon";
 import {ICON_TYPES} from "../../assets/icons/types";
 

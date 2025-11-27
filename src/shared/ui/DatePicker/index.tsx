@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { Icon } from "../../assets/icons/Icon";
 import { useDateRangePicker } from "./model/useDateRangePicker";
-import { Modal } from "@/shared";
+import { Modal } from "../Modal";
 import { DateWheelPicker } from "../DateWheelPicker";
 import { Button } from "../Button";
 

@@ -7,7 +7,7 @@ type IProps = {
     amount?:number;
 };
 
-const AmountLimit = ({ label,amount }: IProps) => {
+export const AmountLimit = ({ label,amount }: IProps) => {
     return (
         <div className="account_limit">
            <div className="account_limit-label">{label}</div>
@@ -15,5 +15,3 @@ const AmountLimit = ({ label,amount }: IProps) => {
         </div>
     )
 }
-
-export default AmountLimit

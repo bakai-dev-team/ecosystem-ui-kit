@@ -1,6 +1,6 @@
 export { Button } from "./Button";
 export { AmountInput } from "./AmountInput";
-export { default as AmountLimit } from "./AmountLimit";
+export { AmountLimit } from "./AmountLimit";
 export { Input } from "./Input";
 export { BalanceCard } from "./BalanceCard";
 export { CheckboxCard } from "./CheckboxCard";

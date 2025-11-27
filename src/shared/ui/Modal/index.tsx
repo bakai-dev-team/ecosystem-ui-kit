@@ -1,8 +1,7 @@
 import { IonModal } from "@ionic/react";
 import "./styles.scss";
-import {ReactNode, useRef} from "react";
+import {ReactNode} from "react";
 import { Icon } from "../../assets/icons/Icon";
-import {gitBranch} from "ionicons/icons";
 
 
 type TProps = {
