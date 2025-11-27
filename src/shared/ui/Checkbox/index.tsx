@@ -1,6 +1,5 @@
-import React from "react";
-import  "./styles.scss"
-import  {Icon} from "../../assets/icons/Icon"
+import "./styles.scss"
+import {Icon} from "../../assets/icons/Icon"
 
 interface ItemProps {
     label:string;

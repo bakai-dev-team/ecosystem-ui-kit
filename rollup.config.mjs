@@ -5,7 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import { dts } from "rollup-plugin-dts";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import copy from "rollup-plugin-copy";
-import json from "@rollup/plugin-json"; 
+import json from "@rollup/plugin-json";
 
 const jsConfig = {
   input: "src/index.ts",
@@ -21,29 +21,49 @@ const jsConfig = {
     resolve({
       browser: true,
     }),
-  json(),
+    json(),
     commonjs(),
     typescript({
-      tsconfig: "./tsconfig.json",
+      tsconfig: "./tsconfig.build.json",
       declaration: false,
+      declarationMap: false,
     }),
     postcss({
-      extract: true, 
+      extract: false, // Don't extract to single file - keep modular
+      modules: false,
       minimize: false,
       use: ['sass'],
       sourceMap: true,
     }),
     copy({
       targets: [
-        { 
-          src: "src/shared/assets/icons/*.svg", 
-          dest: "dist/shared/assets/icons" 
+        {
+          src: "src/**/*.scss",
+          dest: "dist",
+          rename: (name, extension, fullPath) => {
+            return fullPath.replace('src/', '');
+          }
+        },
+        {
+          src: "src/shared/assets/svg-icons/*",
+          dest: "dist/shared/assets/svg-icons"
         }
       ],
-      hook: 'writeBundle' 
+      hook: 'writeBundle'
     })
   ],
-  external: ["react", "react-dom", "react-toastify"], 
+  external: [
+    "react",
+    "react-dom",
+    "@ionic/react",
+    "@ionic/react-router",
+    "react-toastify",
+    "formik",
+    "yup",
+    "i18next",
+    "react-i18next"
+  ],
+};
 
 const dtsConfig = {
   input: "src/index.ts",
@@ -58,7 +78,7 @@ const dtsConfig = {
       }
     })
   ],
-  external: [/\.(css|scss|sass)$/, "react", "react-dom", "react-toastify"], // Игнорируем CSS/SCSS
+  external: [/\.(css|scss|sass)$/],
 };
 
 export default [jsConfig, dtsConfig];
