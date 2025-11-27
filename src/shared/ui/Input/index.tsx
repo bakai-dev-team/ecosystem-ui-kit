@@ -26,6 +26,8 @@ interface IProps {
   value?: string;
   onChange?: (value: string) => void;
   onPostIconClick?: () => void;
+  label?:string;
+  labelPlacement?:"fixed" | "start" | "end" | "floating" | "stacked" | undefined;
 }
 
 export const Input = ({
@@ -33,6 +35,8 @@ export const Input = ({
   postIcon,
   placeholder,
   type = "text",
+  label,
+  labelPlacement,
   value,
   clearInput,
   onChange,
@@ -51,6 +55,8 @@ export const Input = ({
         clearInput={clearInput}
         value={value}
         debounce={0}
+        labelPlacement={labelPlacement}
+        label={label}
         onIonInput={(e) => onChange?.(e.detail.value!)}
       />
 

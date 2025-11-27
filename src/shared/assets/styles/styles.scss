@@ -35,7 +35,6 @@
 
 html {
   height: 100vh !important;
-  background: red !important;
 }
 
 .page-container {
@@ -425,3 +424,8 @@ ion-searchbar {
   margin-bottom: 15px;
 }
 
+
+.modal-height {
+  --height: 50vh;
+  align-items: flex-end;
+}

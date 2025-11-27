@@ -1,0 +1,131 @@
+:root {
+  --history-item-bg: #FFFFFF;
+  --history-title-color:#1C1E24;
+  --history-text-color: #6B7280;
+  --history-amount-color: #6B7280;
+  --history-icon-wrapper:#F5F6F9;
+}
+
+:root.dark {
+  --history-item-bg:#1C1E24;
+  --history-title-color:#FFFFFF;
+  --history-text-color: #9CA3AF;
+  --history-amount-color: #9CA3AF;
+  --history-icon-wrapper:#262932;
+}
+
+
+.history-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.history-label{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--history-text-color);
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  background: var(--history-item-bg);
+  border-radius: 12px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+
+    background: var(--history-item-bg );
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__icon-wrapper{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background: var(--history-icon-wrapper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__status{
+    position: absolute;
+    top: 20px;
+    left: 26px;
+    width: 24px;
+    height: 24px;
+    background: var(--history-item-bg);
+    padding: 2px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--history-title-color);
+    line-height: 130%;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 400;
+    color: var(--history-text-color);
+  }
+
+  &__meta {
+    text-align: right;
+  }
+
+  &__amount {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+
+    &.gray{
+      color: var(--history-amount-color);
+    }
+
+    &.green{
+      color: #16A34A;
+    }
+
+    &.black{
+      color: var(--history-title-color);
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--history-text-color);
+    opacity: 0.6;
+
+  }
+}

@@ -34,11 +34,12 @@ export const Modal = ({
         onDidDismiss={onClose}
         className={`fixed-modal ${className}`}
         backdropDismiss={true}
+        trigger="open-custom-dialog"
     >
       <div className="modal-content">
         <div className="modal-content-header">
           <div className="modal-content-header-block">
-            <div className="modal-content-header-label">{label}</div>
+            {label && <div className="modal-content-header-label">{label}</div>}
             <div onClick={onActionClick} className="modal-content-header-right-label">
                {actionIcon && <Icon type={actionIcon} className="icon"/> }
                {actionText && <span>{actionText}</span>}

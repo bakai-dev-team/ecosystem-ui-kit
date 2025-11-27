@@ -20,3 +20,5 @@ export  {Select} from "./Select"
 export  {Checkbox} from "./Checkbox"
 export  {CheckCard} from "./CheckCard"
 export  {DatePicker} from "./DatePicker"
+export  {NumberCategoryOptions} from "./NumberCategoryOptions"
+export  {HistoryItem} from './HistoryItem'

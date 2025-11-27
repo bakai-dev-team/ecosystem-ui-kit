@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Input, ITextFieldTypes } from "./index";
+import { Input,type ITextFieldTypes } from "./index";
 import {  ICON_TYPES } from "../../assets/icons/types"
 import { IonApp, IonContent } from "@ionic/react";
 import { IconProvider } from "../../assets/icons/IconProvider";
@@ -28,6 +28,11 @@ const meta: Meta<typeof Input> = {
     clearInput: { control: "boolean" },
     placeholder: { control: "text" },
     error: { control: "text" },
+    label: { control: "text" },
+    labelPlacement: {
+      control: "select",
+      options: ["fixed", "start", "end", "floating", "stacked", undefined],
+    },
   },
 };
 
@@ -89,5 +94,30 @@ export const Clearable: Story = {
   },
   args: {
     placeholder: "Можно очистить",
+  },
+};
+
+
+export const WithLabelStart: Story = {
+  render: (args) => {
+    const [value, setValue] = useState("");
+    return <Input {...args} value={value} onChange={setValue} />;
+  },
+  args: {
+    placeholder: "Введите текст",
+    label: "Введите текст",
+    labelPlacement: "floating",
+  },
+};
+
+export const WithLabelStacked: Story = {
+  render: (args) => {
+    const [value, setValue] = useState("");
+    return <Input {...args} value={value} onChange={setValue} />;
+  },
+  args: {
+    placeholder: "Введите текст",
+    label: "Стек лейбл",
+    labelPlacement: "stacked",
   },
 };
